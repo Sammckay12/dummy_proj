@@ -54,7 +54,7 @@ I want to be able to still request it
 ## Summary
 
 - owner/customer sign up
-- owner advertise
+- owner post
 - owner add name, description, price
 - owner add dates available
 - renter request
@@ -80,6 +80,32 @@ Users should receive a text message to a provided number whenever one of the fol
 A ‘chat’ functionality once a space has been booked, allowing users whose space-booking request has been confirmed to chat with the user that owns that space
 
 Basic payment implementation though Stripe.
+
+## MVP
+
+### 1st iteration
+
+Can login to post an advertisement
+Can view without logging in
+Can post property ID and dates
+
+- can view as homepage
+
+- sign up/login
+ - sign up
+ - login
+ - logout
+ - inc db
+
+- owner advertise
+ - property ID
+ - dates
+ - inc db
+
+### 2nd iteration
+
+TBC
+
 
 ## Mockups
 

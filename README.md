@@ -1,4 +1,3 @@
-
 # MakersBnB specification
 
 We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
@@ -52,6 +51,15 @@ until a booking has been confirmed
 I want to be able to still request it
 ```
 
+## Summary
+
+- owner/customer sign up
+- owner advertise
+- owner add name, description, price
+- owner add dates available
+- renter request
+- owner confirm
+
 ## Nice-to-haves
 
  Users should receive an email whenever one of the following happens:
@@ -79,4 +87,4 @@ Mockups are [here](images/mockups.png)
 
 ## Notes
 
-Break down as granular as possible. Estimate times.
+Break down as granular as possible. Estimate times. Mostly we work full stack.

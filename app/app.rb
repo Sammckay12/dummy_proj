@@ -1,7 +1,9 @@
 ENV["RACK_ENV"] ||= "development"
+
 require 'sinatra/base'
 require 'sinatra/flash'
-require_relative './models/user.rb'
+require_relative './models/user'
+require_relative 'data_mapper_setup'
 
 class Makersbnb < Sinatra::Base
   register Sinatra::Flash
@@ -9,7 +11,23 @@ class Makersbnb < Sinatra::Base
 
   enable :sessions
   set :session_secret, 'super secret'
+  
+  get '/' do
+    @listings = Listing.all
+    erb :index
+  end
 
+  post '/' do
+    listing = Listing.create(description: params[:description],
+                              price: params[:price],
+                              datefrom: params[:datefrom])
+    p listing
+    redirect '/'
+  end
+
+  get '/new-listing' do
+    erb :new_listing
+  end
 
   get '/sign_up' do
     erb :'sign_up'

@@ -1,18 +1,21 @@
 {
   "RSpec": {
     "coverage": {
+
       "/Users/konradschlatte/projects/makersbnb/app/app.rb": [
         1,
         1,
         1,
         1,
         null,
+
         1,
         1,
         1,
         null,
         1,
         1,
+
         null,
         null,
         1,
@@ -57,10 +60,12 @@
         22,
         null,
         null,
+
         null,
         1,
         null
       ],
+
       "/Users/konradschlatte/projects/makersbnb/app/models/user.rb": [
         1,
         1,
@@ -69,6 +74,7 @@
         null,
         1,
         null,
+
         1,
         null,
         1,
@@ -76,6 +82,7 @@
         1,
         1,
         null,
+
         1,
         4,
         4,
@@ -84,6 +91,7 @@
         1,
         null,
         2,
+
         null,
         null,
         null,
@@ -94,9 +102,11 @@
         null,
         null,
         null,
+
         2,
         null,
         1,
+
         null,
         null,
         null,
@@ -118,6 +128,7 @@
         null,
         null,
         1,
+
         1,
         1,
         1,
@@ -127,21 +138,26 @@
         1,
         null,
         null,
+
+        null,
+
+        1,
         null,
         1,
+        1,
+
+        1,
+        1,
+        1,
+        1,
+        1,
+
+        1,
+        1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
-        null,
+
         1,
         null,
         1,
@@ -186,5 +202,6 @@
       ]
     },
     "timestamp": 1486481778
+
   }
 }

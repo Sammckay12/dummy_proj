@@ -1,0 +1,4 @@
+Add _spec to features file to run it.
+What does use Rack::MethodOverride do in app.rb?
+And why does rspec not run without it?
+Brute force test for location of main.css where it will not be static during dev.

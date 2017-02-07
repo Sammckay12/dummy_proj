@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 ruby '2.3.3'
 
-
 gem 'cucumber'
 gem 'sinatra'
 gem 'rspec-sinatra'
@@ -22,4 +21,3 @@ gem 'dm-migrations'
 group :test do
   gem 'rspec'
   gem 'capybara'
-end

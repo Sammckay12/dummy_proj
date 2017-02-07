@@ -104,7 +104,12 @@ Can post property ID and dates
 
 ### 2nd iteration
 
-TBC
+- can only add listing if logged in
+- can remove listing
+- get dates to work better
+- price per day
+- css a bit
+- layout header display logged in or not
 
 
 ## Mockups

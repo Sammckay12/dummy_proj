@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head><title>Makers BnB</title>
 <link href="http://assets.makersacademy.com/images/favicons/favicon-16x16.png"
  rel="icon" sizes="16x16" type="image/png">
@@ -9,7 +10,21 @@
 <body>
 <div id="main">
 <h1>Makers BnB</h1>
-  <%= yield %>
+<% if current_user %>
+    <h1>Hello <%=current_user.name%>!</h1>
+    <form action ="/sessions" method ="post">
+      <input type='hidden' name='_method' value='delete'>
+      <input type = "submit" value = "Log Out"/>
+    </form>
+<%else%>
+      <h1>Welcome to Makersbnb</h1>
+    <%if flash[:errors]%>
+       <div id ="errors">
+       <%=flash[:errors]%>
+        </div>
+     <% end %>
+<% end %>
+%= yield %>
 
 </div>
 </body>

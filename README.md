@@ -1,5 +1,16 @@
 # MakersBnB specification
 
+
+WEDNESDAY TO DO LIST:
+- Remove log in/sign up from every page when logged in
+- Formatting the listing
+- Add button to go to new-listing page
+- link user and listing tables to zero to many database
+- Data validation for dates? (limit them to one format)..HTML Calendar plugin
+- Price per day
+- Bullet proof the dates
+
+
 We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
 ## Headline specifications
@@ -16,23 +27,23 @@ We would like a web application that allows users to list spaces they have avail
 ```
 As a user
 In order to use the service
-I want to be able to sign up
+I want to be able to sign up - CHECK
 
 As a user
 When I have a vacant space
-I want to advertise it
+I want to advertise it  - CHECK
 
 As a user
-When I have vacant spaces
-I want to be able to advertise them
-
-As a user
-When advertising a space
-I want to be able to include description, price and name
+When I have vacant spaces (PLURAL)
+I want to be able to advertise them - CHECK
 
 As a user
 When advertising a space
-I want to be able to display the dates available
+I want to be able to include description, price and name - CHECK
+
+As a user
+When advertising a space
+I want to be able to display the dates available - CHECK
 
 As a user
 When looking for vacant spaces

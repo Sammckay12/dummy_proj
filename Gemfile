@@ -21,3 +21,4 @@ gem 'dm-migrations'
 group :test do
   gem 'rspec'
   gem 'capybara'
+end

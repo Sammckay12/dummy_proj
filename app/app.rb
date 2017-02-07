@@ -5,13 +5,13 @@ require 'sinatra/flash'
 require_relative './models/user'
 require_relative 'data_mapper_setup'
 
-class Makersbnb < Sinatra::Base
+class MakersBnB < Sinatra::Base
   register Sinatra::Flash
    use Rack::MethodOverride
 
   enable :sessions
   set :session_secret, 'super secret'
-  
+
   get '/' do
     @listings = Listing.all
     erb :index

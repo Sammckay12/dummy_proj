@@ -1,3 +1,4 @@
+
 class Advert
 
   include DataMapper::Resource

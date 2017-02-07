@@ -2,11 +2,11 @@
 
 <p>Hi there</p>
 
-<ul id='ads'>
+<ul id='listings'>
 
-  <%= @ads.each{ |ad|
-    "<li>#{ad.userid}</li>
-    <li>#{ad.description}</li>
-    <li>#{ad.datefrom}</li>
-    <li>#{ad.dateto}</li> " }%>
+  <% @listings.each do |listing|  %>
+    <li>ID: <%= listing.id %> :  <%= listing.description %> <br />
+    £<%= listing.price %>.00 <br />
+    Date From: <%=listing.datefrom %></li>
+    <% end %>
 </ul>

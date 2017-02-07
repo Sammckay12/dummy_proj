@@ -3,6 +3,7 @@ require 'sinatra/base'
 require_relative './models/user.rb'
 
 class Makersbnb < Sinatra::Base
+   use Rack::MethodOverride
 
   enable :sessions
   set :session_secret, 'super secret whatever'
@@ -20,6 +21,15 @@ class Makersbnb < Sinatra::Base
     session[:user_id] = @user.id
     redirect '/'
   end
+
+  delete '/sessions' do
+    session[:user_id] = nil
+    redirect to '/'
+  end
+
+  # post '/sessions' do
+  #   erb :sessions
+  # end
 
   get '/' do
     erb :index

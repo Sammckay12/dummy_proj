@@ -32,7 +32,38 @@ feature "User Log Out" do
 end
 
 feature "User Log In" do
+
   scenario 'with correct credentials' do
+    sign_up
+    visit('/sessions')
+    expect(page).to have_button("Log in")
+    fill_in :email, with:("hithere@example.com")
+    fill_in :password, with:("wordypass")
+    click_button("Log in")
+    expect(page).to have_content("Hello Jack Johnson!")
+ end
+
+  scenario "with incorrect credentials" do
+   sign_up
+   visit('/sessions')
+   fill_in :email, with:("hithere@example.com")
+   fill_in :password, with:("wordy")
+   click_button("Log in")
+   expect(page).to have_content "password/email combination is incorrect"
+  end
+end
+
+feature "Landing Page" do
+
+  scenario 'user sees login/signup options on the landing page' do
+    visit('/')
+    expect(page).to have_button("Log in")
+    expect(page).to have_button("Sign up")
+    expect(page).to have_content("Welcome to Makersbnb")
+  end
+end
+
+def sign_up
   visit('/sign_up')
   fill_in :email, with:("hithere@example.com")
   fill_in :name, with:("Jack Johnson")
@@ -40,13 +71,4 @@ feature "User Log In" do
   click_button("submit")
   expect(current_path).to eq('/')
   click_button("Log Out")
-  visit('/sessions')
-  expect(page).to have_button("Log in")
-  fill_in :email, with:("hithere@example.com")
-  fill_in :password, with:("wordypass")
-  click_button("Log in")
-  expect(page).to have_content("Hello Jack Johnson!")
-end
-
-
 end

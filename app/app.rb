@@ -1,8 +1,10 @@
 ENV["RACK_ENV"] ||= "development"
 require 'sinatra/base'
+require 'sinatra/flash'
 require_relative './models/user.rb'
 
 class Makersbnb < Sinatra::Base
+  register Sinatra::Flash
    use Rack::MethodOverride
 
   enable :sessions
@@ -32,11 +34,14 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/sessions' do
-    # email = params[:email]
-    # password = params[:password]
     @user = User.authenticate(params[:email],params[:password])
-    session[:user_id] = @user.id
-    redirect to '/'
+    if @user
+      session[:user_id] = @user.id
+      redirect to '/'
+    else
+      flash.now[:errors] = "password/email combination is incorrect"
+      erb :sessions
+    end
   end
 
   get '/' do

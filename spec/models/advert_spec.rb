@@ -1,14 +1,14 @@
 describe Advert do
 
   let!(:advert) do
-    Advert.create( propertyid: 33,
+    Advert.create( userid: 33,
       description: 'Advert 33',
       datefrom: Date.new(2017,3,1),
       dateto: Date.new(2017,3,5))
   end
 
-  it 'adds property ID' do
-    expect(advert.propertyid).to eq 33
+  it 'adds user ID' do
+    expect(advert.userid).to eq 33
   end
 
   it 'adds description' do

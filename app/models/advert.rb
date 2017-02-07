@@ -5,7 +5,7 @@ class Advert
   # has n, :tags, through: Resource
 
   property :id, Serial
-  property :propertyid, Integer
+  property :userid, Integer
   property :description, String
   property :datefrom, Date
   property :dateto, Date

@@ -6,7 +6,7 @@ class Makersbnb < Sinatra::Base
    use Rack::MethodOverride
 
   enable :sessions
-  set :session_secret, 'super secret whatever'
+  set :session_secret, 'super secret'
 
 
   get '/sign_up' do
@@ -27,9 +27,17 @@ class Makersbnb < Sinatra::Base
     redirect to '/'
   end
 
-  # post '/sessions' do
-  #   erb :sessions
-  # end
+  get '/sessions' do
+    erb :sessions
+  end
+
+  post '/sessions' do
+    # email = params[:email]
+    # password = params[:password]
+    @user = User.authenticate(params[:email],params[:password])
+    session[:user_id] = @user.id
+    redirect to '/'
+  end
 
   get '/' do
     erb :index

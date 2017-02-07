@@ -26,28 +26,27 @@ feature "User Log Out" do
     fill_in :password, with:("wordpass")
     click_button("submit")
     click_button("Log Out")
-    expect(page).to have_content('Goodbye!')
     expect(page).not_to have_content("Hello John Johnson!")
+    expect(current_path).to eq('/')
   end
+end
 
-  # let!(:user) do
-  #   User.create(email: 'user@example.com',
-  #               name: 'John Johnson'
-  #               password: 'secret1234')
-  # end
+feature "User Log In" do
+  scenario 'with correct credentials' do
+  visit('/sign_up')
+  fill_in :email, with:("hithere@example.com")
+  fill_in :name, with:("Jack Johnson")
+  fill_in :password, with:("wordypass")
+  click_button("submit")
+  expect(current_path).to eq('/')
+  click_button("Log Out")
+  visit('/sessions')
+  expect(page).to have_button("Log in")
+  fill_in :email, with:("hithere@example.com")
+  fill_in :password, with:("wordypass")
+  click_button("Log in")
+  expect(page).to have_content("Hello Jack Johnson!")
+end
 
-
-
-  # scenario 'with correct credentials' do
-  #   sign_in(email: user.email, password: user.password)
-  #   expect(page).to have_content "Hello #{user.name}!"
-  # end
-  #
-  # def sign_in(email:, password:)
-  #   visit '/sessions/new'
-  #   fill_in :email, with: email
-  #   fill_in :password, with: password
-  #   click_button 'Sign in'
-  # end
 
 end

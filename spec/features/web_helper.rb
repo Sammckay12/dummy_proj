@@ -1,5 +1,5 @@
 def makeAdvert
-  visit '/new-ad/'
+  visit '/new-ad'
   fill_in :userid, with: '23'
   fill_in :description, with: 'Advert 23'
   fill_in :datefrom, with: Date.new(2017,3,1)

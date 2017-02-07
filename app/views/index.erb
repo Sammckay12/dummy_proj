@@ -1,3 +1,12 @@
 <h2>Home Page</h2>
 
 <p>Hi there</p>
+
+<ul id='ads'>
+
+  <%= @ads.each{ |ad|
+    "<li>#{ad.userid}</li>
+    <li>#{ad.description}</li>
+    <li>#{ad.datefrom}</li>
+    <li>#{ad.dateto}</li> " }%>
+</ul>

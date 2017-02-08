@@ -1,8 +1,10 @@
 <ul id='listings'>
 
   <% @listings.each do |listing|  %>
-    <li>ID: <%= listing.id %> :  <%= listing.description %> <br />
-    £<%= listing.price %>.00 <br />
-    Date From: <%=listing.datefrom %></li>
+    <li><%= listing.description %> <br />
+    £<%= listing.price %>.00 per night<br />
+    <%= listing.datefrom.strftime("%-d %B %Y")%>
+    to <%= listing.dateto.strftime("%-d %B %Y")%>
+  </li>
     <% end %>
 </ul>

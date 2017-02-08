@@ -13,7 +13,7 @@ feature 'user sign_up' do
     fill_in :password, with:("wordpass")
     click_button("submit")
     expect(current_path).to eq('/')
-    expect(page).to have_content("Hello John Johnson!")
+    expect(page).to have_content("Hello John Johnson")
   end
 end
 
@@ -26,7 +26,7 @@ feature "User Log Out" do
     fill_in :password, with:("wordpass")
     click_button("submit")
     click_button("Log Out")
-    expect(page).not_to have_content("Hello John Johnson!")
+    expect(page).not_to have_content("Hello John Johnson")
     expect(current_path).to eq('/')
   end
 end
@@ -40,7 +40,7 @@ feature "User Log In" do
     fill_in :email, with:("hithere@example.com")
     fill_in :password, with:("wordypass")
     click_button("Log in")
-    expect(page).to have_content("Hello Jack Johnson!")
+    expect(page).to have_content("Hello Jack Johnson")
  end
 
   scenario "with incorrect credentials" do

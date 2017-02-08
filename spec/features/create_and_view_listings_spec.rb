@@ -5,8 +5,7 @@ feature 'Listings' do
     makeListing
     expect(page.status_code).to eq 200
     within 'ul#listings' do
-      expect(page).to have_content('Hello Feature')
-      expect(page).to have_content(23)
+      expect(page).to have_content('£23.00')
     end
   end
 end

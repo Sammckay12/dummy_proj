@@ -7,6 +7,7 @@ class Listing
   property :description, String, required: true
   property :price, Integer, required: true
   property :datefrom, Date, required: true
+  property :dateto, Date, required: true
 
 end
 

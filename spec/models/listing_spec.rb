@@ -3,12 +3,20 @@ describe Listing do
   let!(:listing) do
     Listing.create(
       description: 'Hello Unit',
-      price: 99
+      price: 99,
+      datefrom: Date.new(2017,3,1),
+      dateto: Date.new(2017,3,5)
     )
   end
+
   it 'adds description' do
     expect(listing.description).to eq 'Hello Unit'
   end
+
+  it 'adds price' do
+    expect(listing.price).to eq 99
+  end
+
 end
   #     Advert.create( userid: 33,
   #       description: 'Advert 33',

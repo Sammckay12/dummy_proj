@@ -2,14 +2,17 @@
 
 
 WEDNESDAY TO DO LIST:
-- Remove log in/sign up from every page when logged in
-- Formatting the listing
-- Add button to go to new-listing page
+TEAM 1:
+- Remove log in/sign up from every page when logged in - CHECK
+- Add button to go to new-listing page - CHECK
 - link user and listing tables to zero to many database
+- Formatting the listing
+
+TEAM 2:
 - Data validation for dates? (limit them to one format)..HTML Calendar plugin
+- TO date too
 - Price per day
 - Bullet proof the dates
-
 
 We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
@@ -43,7 +46,7 @@ I want to be able to include description, price and name - CHECK
 
 As a user
 When advertising a space
-I want to be able to display the dates available - CHECK
+I want to be able to display the dates available
 
 As a user
 When looking for vacant spaces

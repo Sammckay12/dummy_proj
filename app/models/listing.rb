@@ -9,6 +9,8 @@ class Listing
   property :datefrom, Date, required: true
   property :dateto, Date, required: true
 
+  belongs_to :user
+
 end
 
 #

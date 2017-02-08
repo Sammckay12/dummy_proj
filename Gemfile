@@ -17,6 +17,7 @@ gem 'rake'
 gem 'bcrypt'
 gem 'sinatra-flash'
 gem 'dm-migrations'
+gem 'dm-validations'
 
 group :test do
   gem 'rspec'

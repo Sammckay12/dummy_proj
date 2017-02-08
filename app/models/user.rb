@@ -1,6 +1,7 @@
 require 'data_mapper'
 require 'dm-postgres-adapter'
 require 'dm-migrations'
+require 'dm-validations'
 require 'bcrypt'
 
 class User

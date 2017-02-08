@@ -1,10 +1,17 @@
 <ul id='listings'>
 
+  <form action='/request-confirmation' method='post'>
   <% @listings.each do |listing|  %>
     <li><%= listing.description %> <br />
     £<%= listing.price %>.00 per night<br />
     <%= listing.datefrom.strftime("%-d %B %Y")%>
     to <%= listing.dateto.strftime("%-d %B %Y")%>
-  </li>
+    <% if current_user %>
+      <input type="submit" name="Make Offer" value="Make Offer"/>
+      <input type="hidden" name="listingid" value="<%= listing.id %>" />
+      <input type="hidden" name="userid" value="<%= current_user.id %>" />
     <% end %>
+    </li>
+    </form>
+  <% end %>
 </ul>

@@ -7,10 +7,11 @@ require_relative 'data_mapper_setup'
 
 class MakersBnB < Sinatra::Base
   register Sinatra::Flash
-   use Rack::MethodOverride
+  use Rack::MethodOverride
 
   enable :sessions
   set :session_secret, 'super secret'
+  set :sessions, user_id: nil
 
   get '/' do
     @listings = Listing.all
@@ -67,11 +68,17 @@ class MakersBnB < Sinatra::Base
     erb :index
   end
 
+  post '/request-confirmation' do
+    Request.create(userid: params[:userid],
+                    listingid: params[:listingid])
+    erb :confirmation
+  end
+
+
   helpers do
     def current_user
       @current_user ||= User.get(session[:user_id])
     end
-
     def current_path
       @current_path = request.path_info
     end

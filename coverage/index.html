@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-02-08T16:54:16+00:00">2017-02-08T16:54:16+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-02-08T17:20:35+00:00">2017-02-08T17:20:35+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.12%</span></span>
+    (<span class="covered_percent"><span class="green">99.53%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.44
+         9.57
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>10</b> files in total.
-    <b>213</b> relevant lines. 
-    <span class="green"><b>209</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <b>214</b> relevant lines. 
+    <span class="green"><b>213</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#0a7a68d952ccd94929595f1fdd808f87bcaa3337" class="src_link" title="app/app.rb">app/app.rb</a></td>
-        <td class="green strong">94.23 %</td>
-        <td>88</td>
-        <td>52</td>
-        <td>49</td>
-        <td>3</td>
-        <td>22.7</td>
+        <td class="green strong">98.15 %</td>
+        <td>91</td>
+        <td>54</td>
+        <td>53</td>
+        <td>1</td>
+        <td>34.4</td>
       </tr>
       
       <tr>
@@ -102,12 +102,12 @@
       
       <tr>
         <td class="strong"><a href="#20ab9dbb9cb5751c9dded2aac0dbc894a1be5238" class="src_link" title="spec/features/create_and_view_listings_spec.rb">spec/features/create_and_view_listings_spec.rb</a></td>
-        <td class="green strong">94.12 %</td>
-        <td>24</td>
-        <td>17</td>
+        <td class="green strong">100.0 %</td>
+        <td>22</td>
         <td>16</td>
-        <td>1</td>
-        <td>0.9</td>
+        <td>16</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -169,11 +169,11 @@
         <div class="source_table" id="0a7a68d952ccd94929595f1fdd808f87bcaa3337">
   <div class="header">
     <h3>app/app.rb</h3>
-    <h4><span class="green">94.23 %</span> covered</h4>
+    <h4><span class="green">98.15 %</span> covered</h4>
     <div>
-      <b>52</b> relevant lines. 
-      <span class="green"><b>49</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>54</b> relevant lines. 
+      <span class="green"><b>53</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -606,8 +606,8 @@
           <code class="ruby">  post &#39;/request-confirmation&#39; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="72">
-          
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
           
           <code class="ruby">    Request.create(userid: params[:userid],</code>
         </li>
@@ -618,10 +618,10 @@
           <code class="ruby">                    listingid: params[:listingid])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    erb :confirmation</code>
+          <code class="ruby">    redirect &#39;/pending&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
@@ -636,46 +636,46 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  get &#39;/pending&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">  helpers do</code>
+          <code class="ruby">    erb :pending</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">    def current_user</code>
-        </li>
-      
-        <li class="covered" data-hits="1000" data-linenumber="80">
-          <span class="hits">1000</span>
-          
-          <code class="ruby">      @current_user ||= User.get(session[:user_id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="81">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">  helpers do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
-          <code class="ruby">    def current_path</code>
+          <code class="ruby">    def current_user</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="83">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="1675" data-linenumber="83">
+          <span class="hits">1675</span>
           
-          <code class="ruby">      @current_path = request.path_info</code>
+          <code class="ruby">      @current_user ||= User.get(session[:user_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
@@ -684,25 +684,43 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def current_path</code>
+        </li>
+      
+        <li class="covered" data-hits="37" data-linenumber="86">
+          <span class="hits">37</span>
+          
+          <code class="ruby">      @current_path = request.path_info</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="89">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
           <code class="ruby">  run! if app_file == $0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="91">
           
           
           <code class="ruby">end</code>
@@ -1459,11 +1477,11 @@
         <div class="source_table" id="20ab9dbb9cb5751c9dded2aac0dbc894a1be5238">
   <div class="header">
     <h3>spec/features/create_and_view_listings_spec.rb</h3>
-    <h4><span class="green">94.12 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
+      <b>16</b> relevant lines. 
       <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1581,34 +1599,22 @@
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    within all(&#39;input[type=&quot;submit&quot;]&#39;).last do</code>
+          <code class="ruby">    page.all(&#39;input&#39;)[1].click</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">      click_button(&quot;Make Offer&quot;)</code>
+          <code class="ruby">    expect(page).to have_content(&#39;Pending&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
-          
-          <code class="ruby">    expect(page).to have_content(&#39;Pending&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>

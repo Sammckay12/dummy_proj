@@ -71,9 +71,12 @@ class MakersBnB < Sinatra::Base
   post '/request-confirmation' do
     Request.create(userid: params[:userid],
                     listingid: params[:listingid])
-    erb :confirmation
+    redirect '/pending'
   end
 
+  get '/pending' do
+    erb :pending
+  end
 
   helpers do
     def current_user

@@ -16,9 +16,7 @@ feature 'Request' do
     log_out
     sign_up_customer
     log_in_customer
-    within all('input[type="submit"]').last do # to do : doesn't work
-      click_button("Make Offer")
-    end
+    page.all('input')[1].click
     expect(page).to have_content('Pending')
   end
 end

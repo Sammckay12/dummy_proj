@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/admin030815/Projects/makersbnb/app/app.rb": [
+      "/Users/rossbenzie/makersbnb/app/app.rb": [
         1,
         null,
         1,
@@ -84,7 +84,7 @@
         1,
         null
       ],
-      "/Users/admin030815/Projects/makersbnb/app/models/user.rb": [
+      "/Users/rossbenzie/makersbnb/app/models/user.rb": [
         1,
         1,
         1,
@@ -131,7 +131,7 @@
         1,
         1
       ],
-      "/Users/admin030815/Projects/makersbnb/app/data_mapper_setup.rb": [
+      "/Users/rossbenzie/makersbnb/app/data_mapper_setup.rb": [
         1,
         1,
         1,
@@ -144,7 +144,7 @@
         1,
         null
       ],
-      "/Users/admin030815/Projects/makersbnb/app/models/listing.rb": [
+      "/Users/rossbenzie/makersbnb/app/models/listing.rb": [
         1,
         null,
         1,
@@ -188,7 +188,7 @@
         null,
         null
       ],
-      "/Users/admin030815/Projects/makersbnb/spec/features/web_helper.rb": [
+      "/Users/rossbenzie/makersbnb/spec/features/web_helper.rb": [
         1,
         1,
         1,
@@ -198,7 +198,7 @@
         1,
         null
       ],
-      "/Users/admin030815/Projects/makersbnb/spec/features/create_and_view_listings_spec.rb": [
+      "/Users/rossbenzie/makersbnb/spec/features/create_and_view_listings_spec.rb": [
         1,
         null,
         1,
@@ -211,7 +211,7 @@
         null,
         null
       ],
-      "/Users/admin030815/Projects/makersbnb/spec/features/user_management_spec.rb": [
+      "/Users/rossbenzie/makersbnb/spec/features/user_management_spec.rb": [
         1,
         null,
         1,
@@ -287,7 +287,7 @@
         2,
         null
       ],
-      "/Users/admin030815/Projects/makersbnb/spec/models/listing_spec.rb": [
+      "/Users/rossbenzie/makersbnb/spec/models/listing_spec.rb": [
         1,
         null,
         1,
@@ -345,6 +345,6 @@
         null
       ]
     },
-    "timestamp": 1486555744
+    "timestamp": 1486558131
   }
 }

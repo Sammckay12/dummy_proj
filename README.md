@@ -9,10 +9,12 @@ TEAM 1:
 - Formatting the listing
 
 TEAM 2:
-- Data validation for dates? (limit them to one format)..HTML Calendar plugin
-- TO date too
-- Price per day
-- Bullet proof the dates
+- Data validation for dates? (limit them to one format)..HTML Calendar plugin √
+- TO date too √
+- Price per day √
+- Bullet proof the dates √
+
+- offer and acceptance system for each listing as indivisible block
 
 We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
 

@@ -22,7 +22,12 @@ class MakersBnB < Sinatra::Base
     @listing = Listing.create(description: params[:description],
                               price: params[:price],
                               datefrom: params[:datefrom],
+<<<<<<< HEAD
                               dateto: params[:dateto])
+=======
+                              dateto: params[:dateto],
+                              user_id: session[:user_id])
+>>>>>>> master
     redirect '/'
   end
 

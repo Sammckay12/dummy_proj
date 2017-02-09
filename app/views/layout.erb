@@ -27,13 +27,78 @@
         <input type = "submit" value = "Sign up"/>
       </form>
 <% end %>
+<%if current_user && current_path == '/'%>
+<form action ="/new-listing" method ="get">
+  <input type = "submit" value = "New Listing"/>
+</form>
+</div>
+<%end%>
 <%if flash[:errors]%>
     <div id ="errors">
       <%=flash[:errors]%>
     </div>
 <% end %>
 <%= yield %>
-
-</div>
 </body>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+
+body {
+  font-family: "Roboto", sans-serif ;
+  font-size: 16px;
+  line-height:1.8;
+  text-align: center;
+  color: #585858;
+  background-color:#e8fdff;
+}
+h1 {
+  color: #2b4142;
+  font-size: 40px
+}
+
+li {
+  list-style-type:none;
+  padding:0px;
+  margin:5px;
+  display: block;
+  border: 1px solid #585858;
+}
+
+form {
+	max-width: 200px;
+	margin: 20px auto 0 auto;
+}
+
+input,
+textarea {
+
+	/* over*/
+
+border:none;
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border-radius: 3px;
+}
+
+textarea {
+	height: 150px;
+    resize: vertical;
+}
+input[type="submit"] {
+
+	background-color: #2b4142;
+	color: #fff;
+
+	cursor: pointer;
+}
+
+input,
+textarea {
+	outline: none;
+}
+
+</style>
+
 </html>

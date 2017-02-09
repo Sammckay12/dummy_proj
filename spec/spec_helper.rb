@@ -43,6 +43,7 @@ RSpec.configure do |config|
   # config.order = :random
   # Kernel.srand config.seed
   #
+<<<<<<< HEAD
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
@@ -51,11 +52,25 @@ RSpec.configure do |config|
   config.before(:each) do
     DatabaseCleaner.start
   end
+=======
+  # config.before(:suite) do
+  #   DatabaseCleaner.strategy = :transaction
+  #   DatabaseCleaner.clean_with(:truncation)
+  # end
+
+  # config.before(:each) do
+  #   DatabaseCleaner.start
+  # end
+  #
+>>>>>>> master
 
 
 
+<<<<<<< HEAD
   config.after(:each) do
     DatabaseCleaner.clean
   end
 
+=======
+>>>>>>> master
 end

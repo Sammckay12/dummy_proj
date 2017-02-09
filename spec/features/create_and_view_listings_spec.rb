@@ -4,6 +4,7 @@ feature 'Listings' do
   scenario 'can add new listing' do
     make_listing
     expect(page.status_code).to eq 200
+<<<<<<< HEAD
     expect(page).to have_content('£23.00')
   end
 end
@@ -33,5 +34,11 @@ feature 'Request' do
     click_button('Inbox')
     click_button('Confirm Booking')
     expect(page).to have_content('Booking Confirmed!')
+=======
+    # within 'ul#listings' do
+      expect(current_path).to eq('/')
+      expect(page).to have_content(23)
+    # end
+>>>>>>> master
   end
 end

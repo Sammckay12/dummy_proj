@@ -2,11 +2,9 @@
 class Request
   include DataMapper::Resource
 
-  has 1, :user, through: Resource
-  has 1, :listing, through: Resource
-
   property :id, Serial
-  property :userid, Integer, required: true
-  property :listingid, Integer, required: true
+  property :user_id, Integer
+
+  belongs_to :listing
 
 end

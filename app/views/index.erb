@@ -7,6 +7,7 @@
     <%= listing.datefrom.strftime("%-d %B %Y")%>
     to <%= listing.dateto.strftime("%-d %B %Y")%>
     <% if current_user %>
+    listing id is: <%= listing.id %>
       <input type="submit" name="Make Offer" value="Make Offer"/>
       <input type="hidden" name="listingid" value="<%= listing.id %>" />
       <input type="hidden" name="userid" value="<%= current_user.id %>" />

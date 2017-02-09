@@ -19,7 +19,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/' do
-    listing = Listing.create(description: params[:description],
+    @listing = Listing.create(description: params[:description],
                               price: params[:price],
                               datefrom: params[:datefrom],
                               dateto: params[:dateto])
@@ -69,8 +69,10 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/request-confirmation' do
-    Request.create(userid: params[:userid],
-                    listingid: params[:listingid])
+  request =  Request.create( user_id: session[:user_id],
+                    listing_id: params[:listingid]
+                    )
+    p request
     redirect '/pending'
   end
 

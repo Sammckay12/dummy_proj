@@ -95,11 +95,25 @@ textarea {
 </style>
 </head>
 <body>
+<!--
+if current user:
+new listing
+view requests
+logout button
+
+if not current user:
+
+login/signup
+
+-->
 <div id="main">
-<h1></h1>
+  <div id='nav'>
 <% if current_user %>
     <p>Hello <%=current_user.name%> <br>
     You are logged in as <%=current_user.email%></p>
+    <form action ="/user-view">
+      <input type = "submit" value = "View Requests"/>
+    </form>
     <form action ="/sessions" method ="post">
       <input type='hidden' name='_method' value='delete'>
       <input type = "submit" value = "Log Out"/>
@@ -119,6 +133,7 @@ textarea {
   <input type = "submit" value = "New Listing"/>
 </form>
 </div>
+<h1>Makers BnB</h1>
 <%end%>
 <%if flash[:errors]%>
     <div id ="errors">
@@ -126,6 +141,7 @@ textarea {
     </div>
 <% end %>
 <%= yield %>
+</div>
 </body>
 
 </html>

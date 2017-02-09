@@ -6,5 +6,6 @@ class Request
   property :user_id, Integer
 
   belongs_to :listing
+  belongs_to :user
 
 end

@@ -13,6 +13,8 @@ class User
   property :name, String
   property :password_digest,Text
 
+  # has n, :requests, :through => Resource, :required => false
+
  def password=(password)
    @password = password
    self.password_digest = BCrypt::Password.create(password)
@@ -40,7 +42,3 @@ class User
 end
 
 end
-
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/makersbnb_#{ENV['RACK_ENV']}")
-DataMapper.finalize
-DataMapper.auto_upgrade!

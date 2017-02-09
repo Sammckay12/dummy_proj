@@ -2,7 +2,6 @@ ENV["RACK_ENV"] ||= "development"
 
 require 'sinatra/base'
 require 'sinatra/flash'
-require_relative './models/user'
 require_relative 'data_mapper_setup'
 
 class MakersBnB < Sinatra::Base
@@ -28,8 +27,11 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/user-view' do
-    @listings = Listing.all(:user_id => session[:user_id])
-    # @requests = Requests.all(:listing_id => @listings) 
+     @listings = Listing.all(:user_id => session[:user_id])
+     p @listings
+     @requests = Request.all(listing_id: 1)
+     p @requests
+    # p @listings
     erb :user_view
   end
 
@@ -79,6 +81,7 @@ class MakersBnB < Sinatra::Base
                     listing_id: params[:listingid]
                     )
     p request
+    p request.user
     redirect '/pending'
   end
 

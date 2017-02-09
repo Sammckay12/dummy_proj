@@ -21,7 +21,10 @@ h1 {
 }
 input {
   margin: 15px;
-
+}
+#nav {
+display: block;
+cursor: auto;
 }
 body {
   font-family: "Roboto", sans-serif ;
@@ -106,7 +109,7 @@ if not current user:
 login/signup
 
 -->
-<div id="main">
+<div id = 'main'>
   <div id='nav'>
 <% if current_user %>
     <p>Hello <%=current_user.name%> <br>

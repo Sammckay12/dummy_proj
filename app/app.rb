@@ -26,6 +26,11 @@ class MakersBnB < Sinatra::Base
     redirect '/'
   end
 
+  get '/user-view' do
+    @listings = Listing.all(:user_id => session[:user_id])
+    erb :user_view
+  end
+
   get '/new-listing' do
     erb :new_listing
   end

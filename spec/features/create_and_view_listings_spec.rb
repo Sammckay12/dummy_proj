@@ -9,4 +9,8 @@ feature 'Listings' do
       expect(page).to have_content(23)
     # end
   end
+  scenario 'user can view requests on their listings' do
+    visit '/user-view'
+    expect(page).to have_content('Here are your listings and requests')
+  end
 end

@@ -19,4 +19,19 @@ feature 'Request' do
     page.all('input')[1].click
     expect(page).to have_content('Pending')
   end
+
+  scenario 'confirm request' do
+    sign_up_owner
+    log_in_owner
+    make_listing
+    log_out
+    sign_up_customer
+    log_in_customer
+    click_button('Make Offer')
+    log_out
+    log_in_owner
+    click_button('Inbox')
+    click_button('Confirm Booking')
+    expect(page).to have_content('Booking Confirmed!')
+  end
 end

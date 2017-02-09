@@ -1,5 +1,9 @@
 <ul id='listings'>
 
+  <form action ="/inbox" method ="get">
+    <input type = "submit" value = "Inbox" />
+  </form>
+
   <form action='/request-confirmation' method='post'>
   <% @listings.each do |listing|  %>
     <li><%= listing.description %> <br />

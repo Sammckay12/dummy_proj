@@ -2,17 +2,17 @@ describe Request do
 
   let!(:request) do
     Request.create(
-      userid: 2,
-      listingid: 4
+      user_id: 2,
+      listing_id: 4
     )
   end
 
   it 'adds userid' do
-    expect(request.userid).to eq 2
+    expect(request.user_id).to eq 2
   end
 
   it 'adds listing id' do
-    expect(request.listingid).to eq 4
+    expect(request.listing_id).to eq 4
   end
 
 end

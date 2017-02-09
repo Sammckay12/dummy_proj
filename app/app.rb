@@ -23,7 +23,6 @@ class MakersBnB < Sinatra::Base
                               price: params[:price],
                               datefrom: params[:datefrom],
                               dateto: params[:dateto])
-    p listing
     redirect '/'
   end
 
@@ -78,6 +77,10 @@ class MakersBnB < Sinatra::Base
 
   get '/pending' do
     erb :pending
+  end
+
+  get '/inbox' do
+    erb :inbox
   end
 
   helpers do

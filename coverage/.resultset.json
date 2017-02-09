@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/rossbenzie/makersbnb/app/app.rb": [
+      "/Users/konradschlatte/projects/makersbnb/app/app.rb": [
         1,
         null,
         1,
@@ -89,7 +89,7 @@
         1,
         null
       ],
-      "/Users/rossbenzie/makersbnb/app/models/user.rb": [
+      "/Users/konradschlatte/projects/makersbnb/app/models/user.rb": [
         1,
         1,
         1,
@@ -137,7 +137,7 @@
         1,
         1
       ],
-      "/Users/rossbenzie/makersbnb/app/data_mapper_setup.rb": [
+      "/Users/konradschlatte/projects/makersbnb/app/data_mapper_setup.rb": [
         1,
         1,
         1,
@@ -149,7 +149,7 @@
         1,
         1
       ],
-      "/Users/rossbenzie/makersbnb/app/models/listing.rb": [
+      "/Users/konradschlatte/projects/makersbnb/app/models/listing.rb": [
         1,
         null,
         1,
@@ -195,7 +195,7 @@
         null,
         null
       ],
-      "/Users/rossbenzie/makersbnb/spec/features/web_helper.rb": [
+      "/Users/konradschlatte/projects/makersbnb/spec/features/web_helper.rb": [
         1,
         0,
         0,
@@ -220,7 +220,7 @@
         1,
         null
       ],
-      "/Users/rossbenzie/makersbnb/spec/features/create_and_view_listings_spec.rb": [
+      "/Users/konradschlatte/projects/makersbnb/spec/features/create_and_view_listings_spec.rb": [
         1,
         null,
         1,
@@ -238,7 +238,7 @@
         null,
         null
       ],
-      "/Users/rossbenzie/makersbnb/spec/features/user_management_spec.rb": [
+      "/Users/konradschlatte/projects/makersbnb/spec/features/user_management_spec.rb": [
         1,
         null,
         1,
@@ -315,10 +315,10 @@
         2,
         null
       ],
-      "/Users/rossbenzie/makersbnb/spec/features/user_view_spec.rb": [
+      "/Users/konradschlatte/projects/makersbnb/spec/features/user_view_spec.rb": [
 
       ],
-      "/Users/rossbenzie/makersbnb/spec/models/listing_spec.rb": [
+      "/Users/konradschlatte/projects/makersbnb/spec/models/listing_spec.rb": [
         1,
         null,
         1,
@@ -376,6 +376,6 @@
         null
       ]
     },
-    "timestamp": 1486638662
+    "timestamp": 1486641904
   }
 }

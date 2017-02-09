@@ -27,7 +27,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/user-view' do
-    @listings = Listing.all
+    @listings = Listing.all(:user_id => session[:user_id])
     erb :user_view
   end
 

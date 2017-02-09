@@ -5,45 +5,27 @@
 <link href="http://assets.makersacademy.com/images/favicons/favicon-16x16.png"
  rel="icon" sizes="16x16" type="image/png">
 <link rel="stylesheet" type="text/css" href="<%= url('/normalize.css') %>">
-<link rel="stylesheet" type="text/css" href="<%= url('main.css') %>">
-</head>
-<body>
-<div id="main">
-<h1>Makers BnB</h1>
-<% if current_user %>
-    <p>Hello <%=current_user.name%> <br>
-    You are logged in as <%=current_user.email%></p>
-    <form action ="/sessions" method ="post">
-      <input type='hidden' name='_method' value='delete'>
-      <input type = "submit" value = "Log Out"/>
-    </form>
-<%elsif current_path != '/sessions' && current_path != '/sign_up'%>
-      <p>Welcome to Makersbnb<br>
-        Please log in or register</p>
-      <form action ="/sessions" method ="get">
-        <input type = "submit" value = "Log in"/>
-      </form><br>
-      <form action ="/sign_up" method ="get">
-        <input type = "submit" value = "Sign up"/>
-      </form>
-<% end %>
-<%if current_user && current_path == '/'%>
-<form action ="/new-listing" method ="get">
-  <input type = "submit" value = "New Listing"/>
-</form>
-</div>
-<%end%>
-<%if flash[:errors]%>
-    <div id ="errors">
-      <%=flash[:errors]%>
-    </div>
-<% end %>
-<%= yield %>
-</body>
-
 <style>
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
 
+#main {
+  margin: 10px auto 0px auto;
+  font-size: 20px;
+  font-family: sans-serif;
+  width: 890px;
+  height: auto;
+  padding: 20px;
+}
+h1 {
+  font-style: italic;
+}
+input {
+  margin: 15px;
+}
+#nav {
+display: block;
+cursor: auto;
+}
 body {
   font-family: "Roboto", sans-serif ;
   font-size: 16px;
@@ -57,7 +39,7 @@ h1 {
   font-size: 40px
 }
 
-li {
+li, .right {
   list-style-type:none;
   padding:0px;
   margin:5px;
@@ -99,6 +81,70 @@ textarea {
 	outline: none;
 }
 
+.left {
+  float: left;
+  width: 70%;
+}
+.right {
+  float: right;
+  width: 25%;
+  border: 1px solid #585858;
+  padding:
+}
+.clear {
+  clear: all;
+}
+
 </style>
+</head>
+<body>
+<!--
+if current user:
+new listing
+view requests
+logout button
+
+if not current user:
+
+login/signup
+
+-->
+<div id = 'main'>
+  <div id='nav'>
+<% if current_user %>
+    <p>Hello <%=current_user.name%> <br>
+    You are logged in as <%=current_user.email%></p>
+    <form action ="/user-view">
+      <input type = "submit" value = "View Requests"/>
+    </form>
+    <form action ="/sessions" method ="post">
+      <input type='hidden' name='_method' value='delete'>
+      <input type = "submit" value = "Log Out"/>
+    </form>
+<%elsif current_path != '/sessions' && current_path != '/sign_up'%>
+      <p>Welcome to Makersbnb<br>
+        Please log in or register</p>
+      <form action ="/sessions" method ="get">
+        <input type = "submit" value = "Log in"/>
+      </form><br>
+      <form action ="/sign_up" method ="get">
+        <input type = "submit" value = "Sign up"/>
+      </form>
+<% end %>
+<%if current_user && current_path == '/'%>
+<form action ="/new-listing" method ="get">
+  <input type = "submit" value = "New Listing"/>
+</form>
+</div>
+<h1>Makers BnB</h1>
+<%end%>
+<%if flash[:errors]%>
+    <div id ="errors">
+      <%=flash[:errors]%>
+    </div>
+<% end %>
+<%= yield %>
+</div>
+</body>
 
 </html>

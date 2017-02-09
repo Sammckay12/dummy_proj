@@ -1,0 +1,16 @@
+<p>Here are your listings and requests</p>
+
+<ul id='requests'>
+
+  <% @listings.each do |listing|  %>
+    <li class='left'>
+    <%= listing.description %> <br />
+    £<%= listing.price %>.00 per night<br />
+    <%= listing.datefrom.strftime("%-d %B %Y")%>
+    to <%= listing.dateto.strftime("%-d %B %Y")%>
+  </li>
+    <div class='right'>
+    <a href='eric@example.com'>eric@example.com</a>
+    </div>
+  <% end %>
+</ul>

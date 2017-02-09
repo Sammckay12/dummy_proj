@@ -22,13 +22,15 @@ class MakersBnB < Sinatra::Base
     @listing = Listing.create(description: params[:description],
                               price: params[:price],
                               datefrom: params[:datefrom],
-<<<<<<< HEAD
-                              dateto: params[:dateto])
-=======
                               dateto: params[:dateto],
                               user_id: session[:user_id])
->>>>>>> master
     redirect '/'
+  end
+
+  get '/user-view' do
+    @listings = Listing.all(:user_id => session[:user_id])
+    # @requests = Requests.all(:listing_id => @listings) 
+    erb :user_view
   end
 
   get '/new-listing' do

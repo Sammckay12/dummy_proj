@@ -4,8 +4,8 @@
     <input type = "submit" value = "Inbox" />
   </form>
 
-  <form action='/request-confirmation' method='post'>
   <% @listings.each do |listing|  %>
+  <form action='/request-confirmation' method='post'>
     <li><%= listing.description %> <br />
     £<%= listing.price %>.00 per night<br />
     <%= listing.datefrom.strftime("%-d %B %Y")%>

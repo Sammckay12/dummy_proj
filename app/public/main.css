@@ -1,10 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+
 #main {
   margin: 10px auto 0px auto;
   font-size: 20px;
   font-family: sans-serif;
   width: 890px;
   height: auto;
-  border:2px solid black;
   padding: 20px;
 }
 h1 {
@@ -12,5 +13,59 @@ h1 {
 }
 input {
   margin: 15px;
-  
+
+}
+body {
+  font-family: "Roboto", sans-serif ;
+  font-size: 16px;
+  line-height:1.8;
+  text-align: center;
+  color: #585858;
+  background-color:#e8fdff;
+}
+h1 {
+  color: #2b4142;
+  font-size: 40px
+}
+
+li {
+  list-style-type:none;
+  padding:0px;
+  margin:5px;
+  display: block;
+  border: 1px solid #585858;
+}
+
+form {
+	max-width: 200px;
+	margin: 20px auto 0 auto;
+}
+
+input,
+textarea {
+
+	/* over*/
+
+border:none;
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border-radius: 3px;
+}
+
+textarea {
+	height: 150px;
+    resize: vertical;
+}
+input[type="submit"] {
+
+	background-color: #2b4142;
+	color: #fff;
+
+	cursor: pointer;
+}
+
+input,
+textarea {
+	outline: none;
 }
